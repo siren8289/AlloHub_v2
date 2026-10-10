@@ -1,19 +1,20 @@
 # syntax=docker/dockerfile:1
 
-FROM eclipse-temurin:17-jdk-alpine AS build
-WORKDIR /app
-COPY back/ .
-RUN chmod +x gradlew && ./gradlew bootJar -x test
+# 1단계: 빌드
+FROM eclipse-temurin:17-jdk-jammy AS build
+WORKDIR /workspace
 
-FROM eclipse-temurin:17-jre-alpine
+# 빌드 설정만 먼저 복사해서 라이브러리를 받아 둔다. (소스만 바뀌면 이 단계는 캐시 사용)
+COPY gradlew build.gradle settings.gradle ./
+COPY gradle ./gradle
+RUN chmod +x gradlew && ./gradlew --no-daemon dependencies > /dev/null
+
+COPY src ./src
+RUN ./gradlew --no-daemon bootJar -x test
+
+# 2단계: 실행
+FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
-RUN apk add --no-cache curl
-RUN addgroup -S allochub && adduser -S allochub -G allochub
-COPY --from=build /app/build/libs/*.jar app.jar
-RUN mkdir -p /app/data && chown allochub:allochub /app/data
-USER allochub
+COPY --from=build /workspace/build/libs/*.jar /app/app.jar
 EXPOSE 8080
-ENV PORT=8080
-HEALTHCHECK --interval=30s --timeout=5s --start-period=40s --retries=3 \
-  CMD curl -f http://localhost:8080/api/health || exit 1
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
