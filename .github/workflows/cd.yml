@@ -1,7 +1,7 @@
-
 name: CD
 
 on:
+  workflow_dispatch:
   workflow_run:
     workflows: ["CI"]
     types: [completed]
@@ -16,36 +16,60 @@ concurrency:
 
 jobs:
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 40
 
-   
+    steps:
       - name: Configure SSH
         env:
           SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
           EC2_HOST: ${{ secrets.EC2_HOST }}
         run: |
           set -e
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
 
-          echo "1. SSH 디렉터리 생성"
-          mkdir -p "$HOME/.ssh"
-          chmod 700 "$HOME/.ssh"
+          if [ -z "$SSH_KEY" ]; then
+            echo "::error::EC2_SSH_KEY 시크릿이 설정되지 않았습니다."
+            exit 1
+          fi
+          if [ -z "$EC2_HOST" ]; then
+            echo "::error::EC2_HOST 시크릿이 설정되지 않았습니다."
+            exit 1
+          fi
 
-          echo "2. Secret 등록 여부 확인"
-          test -n "$SSH_KEY" || { echo "EC2_SSH_KEY 누락"; exit 1; }
-          test -n "$EC2_HOST" || { echo "EC2_HOST 누락"; exit 1; }
+          printf '%s\n' "$SSH_KEY" | tr -d '\r' > ~/.ssh/deploy_key
+          echo "" >> ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
 
-          echo "3. 개인키 파일 생성"
-          printf '%s\n' "$SSH_KEY" > "$HOME/.ssh/deploy_key"
-          chmod 600 "$HOME/.ssh/deploy_key"
+          ssh-keyscan -H "$EC2_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
 
-          echo "4. 개인키 형식 검사"
-          ssh-keygen -y -f "$HOME/.ssh/deploy_key" > /dev/null
+      - name: Deploy to EC2
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER || 'ubuntu' }}
+          DEPLOY_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: |
+          ssh -i ~/.ssh/deploy_key \
+            -o StrictHostKeyChecking=no \
+            -o UserKnownHostsFile=/dev/null \
+            -o ConnectTimeout=30 \
+            "$EC2_USER@$EC2_HOST" "
+              set -e
+              if [ -d /home/ubuntu/AlloHub_v2 ]; then
+                cd /home/ubuntu/AlloHub_v2
+              elif [ -d \$HOME/AlloHub_v2 ]; then
+                cd \$HOME/AlloHub_v2
+              else
+                echo 'AlloHub_v2 디렉터리를 찾을 수 없습니다.'
+                exit 1
+              fi
 
-          echo "5. 서버 SSH 접근 확인"
-          ssh-keyscan -T 10 -H "$EC2_HOST" \
-            > "$HOME/.ssh/known_hosts"
+              echo '최신 코드 동기화...'
+              git fetch origin main
+              git checkout --detach '$DEPLOY_SHA' || git checkout -f main
 
-          test -s "$HOME/.ssh/known_hosts"
-          echo "SSH 설정 완료"
+              echo '배포 스크립트 실행...'
+              bash scripts/deploy.sh
+            "
