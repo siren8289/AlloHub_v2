@@ -14,8 +14,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from torch import nn
 
-from ai.src.dl_model import RiskMLP
-from ai.src.features import CATEGORY_COLUMNS, FEATURE_COLUMNS, NUMBER_COLUMNS, TARGET_COLUMN
+from ai.src.inference.dl_risk import RiskMLP
+from ai.src.scoring.features import CATEGORY_COLUMNS, FEATURE_COLUMNS, NUMBER_COLUMNS, TARGET_COLUMN
 from ai.train.common import MODELS_DIR, copy_companies_for_server, load_companies
 
 EPOCHS = 40

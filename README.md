@@ -32,10 +32,18 @@ AlloHub_v2/
 │   ├── processed/         전처리 결과 CSV
 │   └── tests/
 ├── ai/                    AI 서버 (FastAPI, Python)
-│   ├── train/             모델 학습 코드 (ML, DL)
+│   ├── train/             모델 학습 코드 (train_ml, train_dl)
 │   ├── models/            학습된 모델 파일, 회사 표
-│   ├── src/               서버 코드 (ML·DL 예측, 단계 규칙, LLM 설명)
-│   └── tests/
+│   ├── src/               서버 코드 (기능별 계층화)
+│   │   ├── core/          전역 설정 및 경로 상수 (config.py)
+│   │   ├── api/           FastAPI 라우터 및 스키마 (routes.py, schemas.py)
+│   │   ├── scoring/       피처 추출, 위험 규칙, 종목 검색 (features, rules, company)
+│   │   ├── inference/     ML(RandomForest) 및 DL(MLP) 위험 예측 추론
+│   │   ├── llm/           Gemini 연동 및 진단 설명 생성 (explainer, prompts)
+│   │   └── service/       기업 위험 진단 오케스트레이션 (screener.py)
+│   └── tests/             계층별 단위 테스트
+├── notebook/              모델 테스트 및 수치 검증 주피터 노트북
+│   └── model_evaluation.ipynb
 ├── back/                  백엔드 (Spring Boot, Java)
 │   └── src/main/java/com/allohub/
 │       ├── screen/        기능 1: 기업 진단
@@ -84,11 +92,11 @@ KRX상장종목정보는 공공누리 제4유형(출처표시, 상업적 이용�
 
 | 구분 | 모델 | 파일 |
 | --- | --- | --- |
-| ML | scikit-learn 랜덤포레스트 | `ai/src/ml_model.py`, `ai/train/train_ml.py` |
-| DL | PyTorch 다층 신경망(MLP) | `ai/src/dl_model.py`, `ai/train/train_dl.py` |
-| LLM | Google Gemini (키가 없으면 기본 문장) | `ai/src/llm_explain.py` |
+| ML | scikit-learn 랜덤포레스트 | `ai/src/inference/ml_risk.py`, `ai/train/train_ml.py` |
+| DL | PyTorch 다층 신경망(MLP) | `ai/src/inference/dl_risk.py`, `ai/train/train_dl.py` |
+| LLM | Google Gemini (키가 없으면 기본 문장) | `ai/src/llm/explainer.py` |
 
-화면에 보이는 점수는 ML과 DL의 평균입니다. 성능 숫자는 `ai/models/metrics_ml.json`, `metrics_dl.json`에 있습니다.
+화면에 보이는 점수는 ML과 DL의 평균입니다. 성능 숫자는 `ai/models/metrics_ml.json`, `metrics_dl.json`에 있으며, `notebook/model_evaluation.ipynb`에서 전체 수치 검증 및 혼동 행렬, 피처 중요도 분석을 확인할 수 있습니다.
 위험 회사가 전체의 약 8%라서 정확도는 높아도 F1은 낮을 수 있습니다. 그래서 실제 부도·영업정지·회생 공시가 있으면 모델 점수보다 그 사실을 우선합니다.
 
 ## 실행 방법

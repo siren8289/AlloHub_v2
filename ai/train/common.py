@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from ai.src.features import FEATURE_COLUMNS, TARGET_COLUMN
+from ai.src.scoring.features import FEATURE_COLUMNS, TARGET_COLUMN
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA_CSV = ROOT / "data" / "processed" / "companies.csv"
