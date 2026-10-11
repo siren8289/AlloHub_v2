@@ -1,0 +1,67 @@
+# 전체 실행: docker compose up --build
+# 접속: http://localhost  (front → back → ai 순서로 연결)
+name: allohub
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: allohub
+      POSTGRES_USER: allo
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?.env 에 DB_PASSWORD 를 넣어 주세요}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U allo -d allohub"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  ai:
+    image: allohub-ai:local
+    build:
+      context: ./ai
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3.8-flash}
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')\""]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  back:
+    image: allohub-back:local
+    build:
+      context: ./back
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/allohub
+      SPRING_DATASOURCE_USERNAME: allo
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      APP_AI_BASE_URL: http://ai:8000
+    depends_on:
+      db:
+        condition: service_healthy
+      ai:
+        condition: service_started
+    restart: unless-stopped
+
+  front:
+    image: allohub-front:local
+    build:
+      context: ./front
+    ports:
+      - "80:80"
+    depends_on:
+      - back
+    restart: unless-stopped
+
+volumes:
+  db-data:

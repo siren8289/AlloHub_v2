@@ -1,37 +1,23 @@
-# dependencies
-node_modules/
-.pnp
-.pnp.*
-
-# next.js
-.next/
-out/
-
-# env
-.env
-.env.local
-.env.*.local
-!.env.example
-
-# sqlite (back/)
-back/data/
-back/build/
-back/.gradle/
-
-# ai-service
-ai-service/.venv/
-ai-service/__pycache__/
-ai-service/**/__pycache__/
-ai-service/*.pyc
-
-# generated prisma
-back/src/generated/prisma
-
-# misc
 .DS_Store
-*.pem
-npm-debug.log*
-coverage/
-*.tsbuildinfo
-next-env.d.ts
 .idea/
+*.iml
+
+# 비밀값 (키는 .env 에만 둔다)
+.env
+*.env.local
+
+# 파이썬
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# 프론트·백엔드 빌드 결과
+node_modules/
+dist/
+.gradle/
+build/
+bin/
+
+# 공공데이터 원본(용량이 커서 제외). 전처리 결과(data/processed)와 학습된 모델(ai/models)은 올린다.
+data/raw/

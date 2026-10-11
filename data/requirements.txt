@@ -1,0 +1,5 @@
+# 공공데이터 수집·전처리에 필요한 패키지
+requests>=2.31,<3
+pandas>=2.2,<3
+python-dotenv>=1,<2
+pytest>=8,<9

@@ -1,0 +1,7 @@
+{
+  "rows": 2737,
+  "distress_rows": 233,
+  "accuracy": 0.8175,
+  "f1": 0.2958,
+  "roc_auc": 0.6909
+}

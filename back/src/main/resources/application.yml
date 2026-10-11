@@ -1,38 +1,17 @@
-server:
-  port: ${PORT:8080}
-  shutdown: graceful
+# 로컬 기본값. Docker에서는 compose.yaml의 환경변수가 이 값을 덮어쓴다.
+app:
+  ai:
+    base-url: http://localhost:8000
+  cors:
+    allowed-origins: http://localhost:5173,http://127.0.0.1:5173,http://localhost:5174,http://127.0.0.1:5174,http://localhost:5175,http://127.0.0.1:5175
 
 spring:
-  application:
-    name: allochub
-  lifecycle:
-    timeout-per-shutdown-phase: 30s
+  # 로컬: H2 메모리 DB (서버를 끄면 기록이 사라진다)
   datasource:
-    url: jdbc:sqlite:file:./data/dev.db
-    driver-class-name: org.sqlite.JDBC
+    url: jdbc:h2:mem:allohub;MODE=PostgreSQL
+    username: sa
+    password:
   jpa:
-    database-platform: org.hibernate.community.dialect.SQLiteDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: update   # 엔티티를 보고 테이블을 자동으로 만든다.
     open-in-view: false
-  flyway:
-    enabled: false
-
-allochub:
-  auth:
-    operator-token: ${ALLOC_OPERATOR_TOKEN:operator-dev-token}
-    admin-token: ${ALLOC_ADMIN_TOKEN:admin-dev-token}
-  ai:
-    enabled: ${ALLOC_AI_ENABLED:true}
-    base-url: ${ALLOC_AI_BASE_URL:http://localhost:8000}
-    connect-timeout-ms: ${ALLOC_AI_CONNECT_TIMEOUT_MS:1000}
-    read-timeout-ms: ${ALLOC_AI_READ_TIMEOUT_MS:3000}
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
-  endpoint:
-    health:
-      show-details: when_authorized
