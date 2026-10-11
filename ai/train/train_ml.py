@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 
-from ai.src.features import CATEGORY_COLUMNS, FEATURE_COLUMNS, NUMBER_COLUMNS, TARGET_COLUMN
+from ai.src.scoring.features import CATEGORY_COLUMNS, FEATURE_COLUMNS, NUMBER_COLUMNS, TARGET_COLUMN
 from ai.train.common import MODELS_DIR, copy_companies_for_server, load_companies
 
 

@@ -1,30 +1,22 @@
 """AlloHub AI 서버 (FastAPI). Spring 백엔드가 내부에서 호출한다.
 
 POST /api/v1/screen   상장기업 위험 진단 (ML + DL + LLM)
+GET  /health          서버 상태 확인
 """
-from pathlib import Path
-
 from dotenv import load_dotenv
 from fastapi import FastAPI
-from pydantic import BaseModel, Field
 
-from src.service import screen
+from src.api.routes import router
+from src.core.config import ENV_PATH
 
-# ai/.env 에서 GEMINI_API_KEY 를 읽는다. (없으면 LLM 대신 기본 문장을 쓴다)
-load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+# 환경변수 로드 (.env 파일이 존재하는 경우)
+if ENV_PATH.exists():
+    load_dotenv(ENV_PATH)
 
-app = FastAPI(title="AlloHub AI", version="2.0.0")
+app = FastAPI(
+    title="AlloHub AI",
+    version="2.0.0",
+    description="상장기업 위험 진단 및 출자금 배분 지원 AI 서비스",
+)
 
-
-class ScreenRequest(BaseModel):
-    company_name: str = Field(min_length=1, max_length=100, examples=["삼성전자"])
-
-
-@app.get("/health")
-def health():
-    return {"status": "ok"}
-
-
-@app.post("/api/v1/screen")
-def screen_api(request: ScreenRequest):
-    return screen(request.company_name.strip())
+app.include_router(router)
