@@ -1,0 +1,502 @@
+# PASS
+
+## QA-20261103-015350-724 TC-UNIT-J-001
+
+- 실행 시각: 2026-11-03T01:53:50+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] junit || B[PASS] TC-UNIT-J-001 PASS actual=[33, 33, 34] expected=[33, 33, 34]
+## QA-20261103-015350-724 TC-UNIT-J-002
+
+- 실행 시각: 2026-11-03T01:53:50+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] junit || B[PASS] TC-UNIT-J-002 PASS actual=[60000, 40000] expected=[60000, 40000]
+## QA-20261103-020048-675 TC-UNIT-J-001
+
+- 실행 시각: 2026-11-03T02:00:48+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] junit || B[PASS] TC-UNIT-J-001 PASS actual=[33, 33, 34] expected=[33, 33, 34]
+## QA-20261103-020048-675 TC-UNIT-J-002
+
+- 실행 시각: 2026-11-03T02:00:48+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] junit || B[PASS] TC-UNIT-J-002 PASS actual=[60000, 40000] expected=[60000, 40000]
+## QA-20261103-020548-152 TC-UNIT-J-001
+
+- 실행 시각: 2026-11-03T02:05:48+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] junit || B[PASS] TC-UNIT-J-001 PASS actual=[33, 33, 34] expected=[33, 33, 34]
+## QA-20261103-020548-152 TC-UNIT-J-002
+
+- 실행 시각: 2026-11-03T02:05:48+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] junit || B[PASS] TC-UNIT-J-002 PASS actual=[60000, 40000] expected=[60000, 40000]
+## QA-20261103-020706-866 TC-UNIT-J-001
+
+- 실행 시각: 2026-11-03T02:07:06+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] junit || B[PASS] TC-UNIT-J-001 PASS actual=[33, 33, 34] expected=[33, 33, 34]
+## QA-20261103-020706-866 TC-UNIT-J-002
+
+- 실행 시각: 2026-11-03T02:07:06+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] junit || B[PASS] TC-UNIT-J-002 PASS actual=[60000, 40000] expected=[60000, 40000]
+## QA-20261103-020935-329 TC-UNIT-J-001
+
+- 실행 시각: 2026-11-03T02:09:35+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] junit || B[PASS] TC-UNIT-J-001 PASS actual=[33, 33, 34] expected=[33, 33, 34]
+## QA-20261103-020935-329 TC-UNIT-J-002
+
+- 실행 시각: 2026-11-03T02:09:35+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] junit || B[PASS] TC-UNIT-J-002 PASS actual=[60000, 40000] expected=[60000, 40000]
+## QA-20261103-021000-562 TC-UNIT-J-001
+
+- 실행 시각: 2026-11-03T02:10:00+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] junit || B[PASS] TC-UNIT-J-001 PASS actual=[33, 33, 34] expected=[33, 33, 34]
+## QA-20261103-021000-562 TC-UNIT-J-002
+
+- 실행 시각: 2026-11-03T02:10:00+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] junit || B[PASS] TC-UNIT-J-002 PASS actual=[60000, 40000] expected=[60000, 40000]
+## QA-20261103-021147-653 TC-UNIT-J-001
+
+- 실행 시각: 2026-11-03T02:11:47+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] junit || B[PASS] TC-UNIT-J-001 PASS actual=[33, 33, 34] expected=[33, 33, 34]
+## QA-20261103-021147-653 TC-UNIT-J-002
+
+- 실행 시각: 2026-11-03T02:11:47+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] junit || B[PASS] TC-UNIT-J-002 PASS actual=[60000, 40000] expected=[60000, 40000]
+## QA-20261103-021222-293 TC-UNIT-J-001
+
+- 실행 시각: 2026-11-03T02:12:22+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] junit || B[PASS] TC-UNIT-J-001 PASS actual=[33, 33, 34] expected=[33, 33, 34]
+## QA-20261103-021222-293 TC-UNIT-J-002
+
+- 실행 시각: 2026-11-03T02:12:22+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] junit || B[PASS] TC-UNIT-J-002 PASS actual=[60000, 40000] expected=[60000, 40000]
+## QA-20261103-021407-252 TC-UNIT-J-001
+
+- 실행 시각: 2026-11-03T02:14:07+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] junit || B[PASS] TC-UNIT-J-001 PASS actual=[33, 33, 34] expected=[33, 33, 34]
+## QA-20261103-021407-252 TC-UNIT-J-002
+
+- 실행 시각: 2026-11-03T02:14:07+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] junit || B[PASS] TC-UNIT-J-002 PASS actual=[60000, 40000] expected=[60000, 40000]
+## QA-20261103-021426-955 TC-UNIT-J-001
+
+- 실행 시각: 2026-11-03T02:14:26+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] junit || B[PASS] TC-UNIT-J-001 PASS actual=[33, 33, 34] expected=[33, 33, 34]
+## QA-20261103-021426-955 TC-UNIT-J-002
+
+- 실행 시각: 2026-11-03T02:14:26+09:00
+- 기능: allocation_calc
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: ./gradlew test / PASS
+- 2차 검증: java AllocationCrossCheck / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: back/src/main/java/com/allohub/allocation/AllocationCalculator.java
+- 함수: split
+- 줄 번호: 20
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 원 단위 배분을 JUnit과 독립 main으로 확인
+- 입력값: -
+- 기대 결과: TC-UNIT-J-001=[33,33,34], TC-UNIT-J-002=[60000,40000]
+- 실제 결과: PASS
+- 오류: -
+- 재현: ./gradlew test ; java AllocationCrossCheck
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] junit || B[PASS] TC-UNIT-J-002 PASS actual=[60000, 40000] expected=[60000, 40000]

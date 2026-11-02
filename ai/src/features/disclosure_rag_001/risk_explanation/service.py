@@ -6,6 +6,7 @@
 3. [핵심 가드레일] 공시로 확인되지 않은 파산/부도 확정 표현을 필터링 및 순화하여
    AI 환각(Hallucination)에 의한 법적·금융적 오류를 방지합니다.
 """
+import logging
 from typing import Any, List, Mapping, Tuple
 
 from src.core.config import (
@@ -18,6 +19,8 @@ from src.features.disclosure_rag_001.schemas import (
     DisclosureChunk,
     EvidenceCheckResult,
 )
+
+logger = logging.getLogger(__name__)
 
 
 def extract_citations_from_chunks(chunks: List[DisclosureChunk]) -> List[str]:
@@ -181,8 +184,8 @@ def generate_rag_explanation(
                 cleaned = sanitize_risk_statements(response.text.strip(), evidence_check)
                 return cleaned, "rag_gemini", citations
         except Exception:
-            # API 호출 실패 시 조용히 기본 템플릿 생성기로 전환
-            pass
+            # API 호출 실패 시 기본 템플릿 생성기로 전환한다.
+            logger.warning("Gemini 위험 설명 실패, 기본 템플릿으로 폴백", exc_info=True)
 
     # Gemini 미사용 시 기본 템플릿 생성기 적용
     basic_text = generate_basic_rag_explanation(company, screening_result, evidence_check, chunks)

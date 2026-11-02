@@ -6,6 +6,7 @@
 외부 API 키가 없는 오프라인 환경에서도 scikit-learn 기반의 정규화 임베딩으로 완전하게 동작하도록 설계되었습니다.
 """
 import hashlib
+import logging
 import math
 from typing import List, Optional
 
@@ -13,6 +14,8 @@ import numpy as np
 
 from src.core.config import get_gemini_api_key
 from src.features.disclosure_rag_001.schemas import DisclosureChunk, DisclosureDocument
+
+logger = logging.getLogger(__name__)
 
 # 고정 임베딩 차원 (오프라인 폴백용)
 FALLBACK_EMBEDDING_DIM = 512
@@ -221,8 +224,8 @@ def embed_text(text: str) -> List[float]:
             if hasattr(resp, "embeddings") and resp.embeddings:
                 return resp.embeddings[0].values
         except Exception:
-            # 외부 API 오류 시 조용히 내장 폴백으로 전환
-            pass
+            # 외부 API 오류 시 내장 폴백으로 전환한다.
+            logger.warning("Gemini 임베딩 실패, 내장 임베딩으로 폴백", exc_info=True)
 
     return compute_fallback_embedding(text)
 

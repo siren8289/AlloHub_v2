@@ -1,0 +1,252 @@
+# PASS
+
+## QA-20261103-015350-724 TC-UNIT-009
+
+- 실행 시각: 2026-11-03T01:53:50+09:00
+- 기능: number_convert
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: python -m pytest qa/contract/test_contracts.py data/tests --junitxml / PASS
+- 2차 검증: python scripts/qa/tools/independent_unit.py / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: data/etl/transform.py
+- 함수: to_number
+- 줄 번호: 19
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 계약 조건을 두 실행기로 확인
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python -m pytest qa/contract/test_contracts.py data/tests --junitxml ; python scripts/qa/tools/independent_unit.py
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] pytest || B[PASS] 1,383 -> 1383; empty and dash -> None
+## QA-20261103-020048-675 TC-UNIT-009
+
+- 실행 시각: 2026-11-03T02:00:48+09:00
+- 기능: number_convert
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: python -m pytest qa/contract/test_contracts.py data/tests --junitxml / PASS
+- 2차 검증: python scripts/qa/tools/independent_unit.py / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: data/etl/transform.py
+- 함수: to_number
+- 줄 번호: 19
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 계약 조건을 두 실행기로 확인
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python -m pytest qa/contract/test_contracts.py data/tests --junitxml ; python scripts/qa/tools/independent_unit.py
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] pytest || B[PASS] 1,383 -> 1383; empty and dash -> None
+## QA-20261103-020548-152 TC-UNIT-009
+
+- 실행 시각: 2026-11-03T02:05:48+09:00
+- 기능: number_convert
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: python -m pytest qa/contract/test_contracts.py data/tests --junitxml / PASS
+- 2차 검증: python scripts/qa/tools/independent_unit.py / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: data/etl/transform.py
+- 함수: to_number
+- 줄 번호: 19
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 계약 조건을 두 실행기로 확인
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python -m pytest qa/contract/test_contracts.py data/tests --junitxml ; python scripts/qa/tools/independent_unit.py
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] pytest || B[PASS] 1,383 -> 1383; empty and dash -> None
+## QA-20261103-020706-866 TC-UNIT-009
+
+- 실행 시각: 2026-11-03T02:07:06+09:00
+- 기능: number_convert
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: python -m pytest qa/contract/test_contracts.py data/tests --junitxml / PASS
+- 2차 검증: python scripts/qa/tools/independent_unit.py / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: data/etl/transform.py
+- 함수: to_number
+- 줄 번호: 19
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 계약 조건을 두 실행기로 확인
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python -m pytest qa/contract/test_contracts.py data/tests --junitxml ; python scripts/qa/tools/independent_unit.py
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] pytest || B[PASS] 1,383 -> 1383; empty and dash -> None
+## QA-20261103-020935-329 TC-UNIT-009
+
+- 실행 시각: 2026-11-03T02:09:35+09:00
+- 기능: number_convert
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: python -m pytest qa/contract/test_contracts.py data/tests --junitxml / PASS
+- 2차 검증: python scripts/qa/tools/independent_unit.py / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: data/etl/transform.py
+- 함수: to_number
+- 줄 번호: 19
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 계약 조건을 두 실행기로 확인
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python -m pytest qa/contract/test_contracts.py data/tests --junitxml ; python scripts/qa/tools/independent_unit.py
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] pytest || B[PASS] 1,383 -> 1383; empty and dash -> None
+## QA-20261103-021000-562 TC-UNIT-009
+
+- 실행 시각: 2026-11-03T02:10:00+09:00
+- 기능: number_convert
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: python -m pytest qa/contract/test_contracts.py data/tests --junitxml / PASS
+- 2차 검증: python scripts/qa/tools/independent_unit.py / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: data/etl/transform.py
+- 함수: to_number
+- 줄 번호: 19
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 계약 조건을 두 실행기로 확인
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python -m pytest qa/contract/test_contracts.py data/tests --junitxml ; python scripts/qa/tools/independent_unit.py
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] pytest || B[PASS] 1,383 -> 1383; empty and dash -> None
+## QA-20261103-021147-653 TC-UNIT-009
+
+- 실행 시각: 2026-11-03T02:11:47+09:00
+- 기능: number_convert
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: python -m pytest qa/contract/test_contracts.py data/tests --junitxml / PASS
+- 2차 검증: python scripts/qa/tools/independent_unit.py / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: data/etl/transform.py
+- 함수: to_number
+- 줄 번호: 19
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 계약 조건을 두 실행기로 확인
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python -m pytest qa/contract/test_contracts.py data/tests --junitxml ; python scripts/qa/tools/independent_unit.py
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] pytest || B[PASS] 1,383 -> 1383; empty and dash -> None
+## QA-20261103-021222-293 TC-UNIT-009
+
+- 실행 시각: 2026-11-03T02:12:22+09:00
+- 기능: number_convert
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: python -m pytest qa/contract/test_contracts.py data/tests --junitxml / PASS
+- 2차 검증: python scripts/qa/tools/independent_unit.py / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: data/etl/transform.py
+- 함수: to_number
+- 줄 번호: 19
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 계약 조건을 두 실행기로 확인
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python -m pytest qa/contract/test_contracts.py data/tests --junitxml ; python scripts/qa/tools/independent_unit.py
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] pytest || B[PASS] 1,383 -> 1383; empty and dash -> None
+## QA-20261103-021407-252 TC-UNIT-009
+
+- 실행 시각: 2026-11-03T02:14:07+09:00
+- 기능: number_convert
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: python -m pytest qa/contract/test_contracts.py data/tests --junitxml / PASS
+- 2차 검증: python scripts/qa/tools/independent_unit.py / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: data/etl/transform.py
+- 함수: to_number
+- 줄 번호: 19
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 계약 조건을 두 실행기로 확인
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python -m pytest qa/contract/test_contracts.py data/tests --junitxml ; python scripts/qa/tools/independent_unit.py
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] pytest || B[PASS] 1,383 -> 1383; empty and dash -> None
+## QA-20261103-021426-955 TC-UNIT-009
+
+- 실행 시각: 2026-11-03T02:14:26+09:00
+- 기능: number_convert
+- 영역: 01_unit_integration
+- 테스트 종류: unit
+- 1차 검증: python -m pytest qa/contract/test_contracts.py data/tests --junitxml / PASS
+- 2차 검증: python scripts/qa/tools/independent_unit.py / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: data/etl/transform.py
+- 함수: to_number
+- 줄 번호: 19
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 계약 조건을 두 실행기로 확인
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python -m pytest qa/contract/test_contracts.py data/tests --junitxml ; python scripts/qa/tools/independent_unit.py
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] pytest || B[PASS] 1,383 -> 1383; empty and dash -> None

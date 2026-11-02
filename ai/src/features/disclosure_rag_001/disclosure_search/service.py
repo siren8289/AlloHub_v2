@@ -8,10 +8,13 @@
 4. PostgreSQL + pgvector 연결이 제공되면 데이터베이스를 조회하며,
    미설치 환경에서는 동일한 필터링 로직을 갖는 내장 메모리 검색기로 안전하게 폴백합니다.
 """
+import logging
 import os
 from typing import List, Optional
 
 import numpy as np
+
+logger = logging.getLogger(__name__)
 
 from src.features.disclosure_rag_001.disclosure_knowledge.service import (
     embed_text,
@@ -231,8 +234,8 @@ def query_pgvector_if_available(
                         ))
                     return results
     except Exception:
-        # DB 연결 실패 또는 pgvector 미설치 시 조용히 메모리 검색으로 전환
-        pass
+        # DB 연결 실패 또는 pgvector 미설치 시 메모리 검색으로 전환한다.
+        logger.warning("pgvector 조회 실패, 메모리 검색으로 폴백", exc_info=True)
 
     return None
 

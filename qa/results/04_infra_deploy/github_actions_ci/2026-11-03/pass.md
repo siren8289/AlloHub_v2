@@ -1,0 +1,252 @@
+# PASS
+
+## QA-20261103-015350-724 TC-INFRA-002
+
+- 실행 시각: 2026-11-03T01:53:50+09:00
+- 기능: github_actions_ci
+- 영역: 04_infra_deploy
+- 테스트 종류: infra
+- 1차 검증: python scripts/qa/tools/ci_workflow_check.py --tool a / PASS
+- 2차 검증: python scripts/qa/tools/ci_workflow_check.py --tool b / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: .github/workflows/ci.yml
+- 함수: jobs
+- 줄 번호: 9
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: CI 워크플로 존재와 qa 잡 교차 확인
+- 입력값: -
+- 기대 결과: ci.yml에 qa 잡과 python3 scripts/qa/run_qa.py 포함
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/ci_workflow_check.py --tool a ; python scripts/qa/tools/ci_workflow_check.py --tool b
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] ci.yml 존재, jobs·qa 확인 || B[PASS] qa 잡이 run_qa.py --with-regression 을 실행
+## QA-20261103-020048-675 TC-INFRA-002
+
+- 실행 시각: 2026-11-03T02:00:48+09:00
+- 기능: github_actions_ci
+- 영역: 04_infra_deploy
+- 테스트 종류: infra
+- 1차 검증: python scripts/qa/tools/ci_workflow_check.py --tool a / PASS
+- 2차 검증: python scripts/qa/tools/ci_workflow_check.py --tool b / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: .github/workflows/ci.yml
+- 함수: jobs
+- 줄 번호: 9
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: CI 워크플로 존재와 qa 잡 교차 확인
+- 입력값: -
+- 기대 결과: ci.yml에 qa 잡과 python3 scripts/qa/run_qa.py 포함
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/ci_workflow_check.py --tool a ; python scripts/qa/tools/ci_workflow_check.py --tool b
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] ci.yml 존재, jobs·qa 확인 || B[PASS] qa 잡이 run_qa.py --with-regression 을 실행
+## QA-20261103-020548-152 TC-INFRA-002
+
+- 실행 시각: 2026-11-03T02:05:48+09:00
+- 기능: github_actions_ci
+- 영역: 04_infra_deploy
+- 테스트 종류: infra
+- 1차 검증: python scripts/qa/tools/ci_workflow_check.py --tool a / PASS
+- 2차 검증: python scripts/qa/tools/ci_workflow_check.py --tool b / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: .github/workflows/ci.yml
+- 함수: jobs
+- 줄 번호: 9
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: CI 워크플로 존재와 qa 잡 교차 확인
+- 입력값: -
+- 기대 결과: ci.yml에 qa 잡과 python3 scripts/qa/run_qa.py 포함
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/ci_workflow_check.py --tool a ; python scripts/qa/tools/ci_workflow_check.py --tool b
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] ci.yml 존재, jobs·qa 확인 || B[PASS] qa 잡이 run_qa.py --with-regression 을 실행
+## QA-20261103-020706-866 TC-INFRA-002
+
+- 실행 시각: 2026-11-03T02:07:06+09:00
+- 기능: github_actions_ci
+- 영역: 04_infra_deploy
+- 테스트 종류: infra
+- 1차 검증: python scripts/qa/tools/ci_workflow_check.py --tool a / PASS
+- 2차 검증: python scripts/qa/tools/ci_workflow_check.py --tool b / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: .github/workflows/ci.yml
+- 함수: jobs
+- 줄 번호: 9
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: CI 워크플로 존재와 qa 잡 교차 확인
+- 입력값: -
+- 기대 결과: ci.yml에 qa 잡과 python3 scripts/qa/run_qa.py 포함
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/ci_workflow_check.py --tool a ; python scripts/qa/tools/ci_workflow_check.py --tool b
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] ci.yml 존재, jobs·qa 확인 || B[PASS] qa 잡이 run_qa.py --with-regression 을 실행
+## QA-20261103-020935-329 TC-INFRA-002
+
+- 실행 시각: 2026-11-03T02:09:35+09:00
+- 기능: github_actions_ci
+- 영역: 04_infra_deploy
+- 테스트 종류: infra
+- 1차 검증: python scripts/qa/tools/ci_workflow_check.py --tool a / PASS
+- 2차 검증: python scripts/qa/tools/ci_workflow_check.py --tool b / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: .github/workflows/ci.yml
+- 함수: jobs
+- 줄 번호: 9
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: CI 워크플로 존재와 qa 잡 교차 확인
+- 입력값: -
+- 기대 결과: ci.yml에 qa 잡과 python3 scripts/qa/run_qa.py 포함
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/ci_workflow_check.py --tool a ; python scripts/qa/tools/ci_workflow_check.py --tool b
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] ci.yml 존재, jobs·qa 확인 || B[PASS] qa 잡이 run_qa.py --with-regression 을 실행
+## QA-20261103-021000-562 TC-INFRA-002
+
+- 실행 시각: 2026-11-03T02:10:00+09:00
+- 기능: github_actions_ci
+- 영역: 04_infra_deploy
+- 테스트 종류: infra
+- 1차 검증: python scripts/qa/tools/ci_workflow_check.py --tool a / PASS
+- 2차 검증: python scripts/qa/tools/ci_workflow_check.py --tool b / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: .github/workflows/ci.yml
+- 함수: jobs
+- 줄 번호: 9
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: CI 워크플로 존재와 qa 잡 교차 확인
+- 입력값: -
+- 기대 결과: ci.yml에 qa 잡과 python3 scripts/qa/run_qa.py 포함
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/ci_workflow_check.py --tool a ; python scripts/qa/tools/ci_workflow_check.py --tool b
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] ci.yml 존재, jobs·qa 확인 || B[PASS] qa 잡이 run_qa.py --with-regression 을 실행
+## QA-20261103-021147-653 TC-INFRA-002
+
+- 실행 시각: 2026-11-03T02:11:47+09:00
+- 기능: github_actions_ci
+- 영역: 04_infra_deploy
+- 테스트 종류: infra
+- 1차 검증: python scripts/qa/tools/ci_workflow_check.py --tool a / PASS
+- 2차 검증: python scripts/qa/tools/ci_workflow_check.py --tool b / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: .github/workflows/ci.yml
+- 함수: jobs
+- 줄 번호: 9
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: CI 워크플로 존재와 qa 잡 교차 확인
+- 입력값: -
+- 기대 결과: ci.yml에 qa 잡과 python3 scripts/qa/run_qa.py 포함
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/ci_workflow_check.py --tool a ; python scripts/qa/tools/ci_workflow_check.py --tool b
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] ci.yml 존재, jobs·qa 확인 || B[PASS] qa 잡이 run_qa.py --with-regression 을 실행
+## QA-20261103-021222-293 TC-INFRA-002
+
+- 실행 시각: 2026-11-03T02:12:22+09:00
+- 기능: github_actions_ci
+- 영역: 04_infra_deploy
+- 테스트 종류: infra
+- 1차 검증: python scripts/qa/tools/ci_workflow_check.py --tool a / PASS
+- 2차 검증: python scripts/qa/tools/ci_workflow_check.py --tool b / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: .github/workflows/ci.yml
+- 함수: jobs
+- 줄 번호: 9
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: CI 워크플로 존재와 qa 잡 교차 확인
+- 입력값: -
+- 기대 결과: ci.yml에 qa 잡과 python3 scripts/qa/run_qa.py 포함
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/ci_workflow_check.py --tool a ; python scripts/qa/tools/ci_workflow_check.py --tool b
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] ci.yml 존재, jobs·qa 확인 || B[PASS] qa 잡이 run_qa.py --with-regression 을 실행
+## QA-20261103-021407-252 TC-INFRA-002
+
+- 실행 시각: 2026-11-03T02:14:07+09:00
+- 기능: github_actions_ci
+- 영역: 04_infra_deploy
+- 테스트 종류: infra
+- 1차 검증: python scripts/qa/tools/ci_workflow_check.py --tool a / PASS
+- 2차 검증: python scripts/qa/tools/ci_workflow_check.py --tool b / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: .github/workflows/ci.yml
+- 함수: jobs
+- 줄 번호: 9
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: CI 워크플로 존재와 qa 잡 교차 확인
+- 입력값: -
+- 기대 결과: ci.yml에 qa 잡과 python3 scripts/qa/run_qa.py 포함
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/ci_workflow_check.py --tool a ; python scripts/qa/tools/ci_workflow_check.py --tool b
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] ci.yml 존재, jobs·qa 확인 || B[PASS] qa 잡이 run_qa.py --with-regression 을 실행
+## QA-20261103-021426-955 TC-INFRA-002
+
+- 실행 시각: 2026-11-03T02:14:26+09:00
+- 기능: github_actions_ci
+- 영역: 04_infra_deploy
+- 테스트 종류: infra
+- 1차 검증: python scripts/qa/tools/ci_workflow_check.py --tool a / PASS
+- 2차 검증: python scripts/qa/tools/ci_workflow_check.py --tool b / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: .github/workflows/ci.yml
+- 함수: jobs
+- 줄 번호: 9
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: CI 워크플로 존재와 qa 잡 교차 확인
+- 입력값: -
+- 기대 결과: ci.yml에 qa 잡과 python3 scripts/qa/run_qa.py 포함
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/ci_workflow_check.py --tool a ; python scripts/qa/tools/ci_workflow_check.py --tool b
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] ci.yml 존재, jobs·qa 확인 || B[PASS] qa 잡이 run_qa.py --with-regression 을 실행

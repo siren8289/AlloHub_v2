@@ -1,0 +1,19 @@
+{
+  "run_id": "QA-20261103-021407-252",
+  "finished_at": "2026-11-03T02:14:48+09:00",
+  "exit_code": 0,
+  "high_open": false,
+  "source_fingerprint": "04390afb587ee1376d4ee36513313ec03d040fffd9b06c37188488d86b2f4f8b",
+  "test_types": [
+    "api",
+    "infra",
+    "security",
+    "unit"
+  ],
+  "areas": [
+    "01_unit_integration",
+    "02_web_api",
+    "03_security_quality",
+    "04_infra_deploy"
+  ]
+}

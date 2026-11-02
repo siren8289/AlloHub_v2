@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 scripts/qa/hooks/qa_stop.py",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}

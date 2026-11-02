@@ -1,0 +1,252 @@
+# PASS
+
+## QA-20261103-015350-724 TC-SEC-001
+
+- 실행 시각: 2026-11-03T01:53:50+09:00
+- 기능: secrets
+- 영역: 03_security_quality
+- 테스트 종류: security
+- 1차 검증: python scripts/qa/tools/security_scan.py / PASS
+- 2차 검증: python -m bandit -r ai/src data -f json / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: UNKNOWN
+- 함수: UNKNOWN
+- 줄 번호: UNKNOWN
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 시크릿, 예외 삼킴, 위험한 실행 패턴
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/security_scan.py ; python -m bandit -r ai/src data -f json
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] findings=0 || B[PASS] bandit 해당 규칙 없음
+## QA-20261103-020048-675 TC-SEC-001
+
+- 실행 시각: 2026-11-03T02:00:48+09:00
+- 기능: secrets
+- 영역: 03_security_quality
+- 테스트 종류: security
+- 1차 검증: python scripts/qa/tools/security_scan.py / PASS
+- 2차 검증: python -m bandit -r ai/src data -f json / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: UNKNOWN
+- 함수: UNKNOWN
+- 줄 번호: UNKNOWN
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 시크릿, 예외 삼킴, 위험한 실행 패턴
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/security_scan.py ; python -m bandit -r ai/src data -f json
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] findings=0 || B[PASS] bandit 해당 규칙 없음
+## QA-20261103-020548-152 TC-SEC-001
+
+- 실행 시각: 2026-11-03T02:05:48+09:00
+- 기능: secrets
+- 영역: 03_security_quality
+- 테스트 종류: security
+- 1차 검증: python scripts/qa/tools/security_scan.py / PASS
+- 2차 검증: python -m bandit -r ai/src data -f json / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: UNKNOWN
+- 함수: UNKNOWN
+- 줄 번호: UNKNOWN
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 시크릿, 예외 삼킴, 위험한 실행 패턴
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/security_scan.py ; python -m bandit -r ai/src data -f json
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] findings=0 || B[PASS] bandit 해당 규칙 없음
+## QA-20261103-020706-866 TC-SEC-001
+
+- 실행 시각: 2026-11-03T02:07:06+09:00
+- 기능: secrets
+- 영역: 03_security_quality
+- 테스트 종류: security
+- 1차 검증: python scripts/qa/tools/security_scan.py / PASS
+- 2차 검증: python -m bandit -r ai/src data -f json / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: UNKNOWN
+- 함수: UNKNOWN
+- 줄 번호: UNKNOWN
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 시크릿, 예외 삼킴, 위험한 실행 패턴
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/security_scan.py ; python -m bandit -r ai/src data -f json
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] findings=0 || B[PASS] bandit 해당 규칙 없음
+## QA-20261103-020935-329 TC-SEC-001
+
+- 실행 시각: 2026-11-03T02:09:35+09:00
+- 기능: secrets
+- 영역: 03_security_quality
+- 테스트 종류: security
+- 1차 검증: python scripts/qa/tools/security_scan.py / PASS
+- 2차 검증: python -m bandit -r ai/src data -f json / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: UNKNOWN
+- 함수: UNKNOWN
+- 줄 번호: UNKNOWN
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 시크릿, 예외 삼킴, 위험한 실행 패턴
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/security_scan.py ; python -m bandit -r ai/src data -f json
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] findings=0 || B[PASS] bandit 해당 규칙 없음
+## QA-20261103-021000-562 TC-SEC-001
+
+- 실행 시각: 2026-11-03T02:10:00+09:00
+- 기능: secrets
+- 영역: 03_security_quality
+- 테스트 종류: security
+- 1차 검증: python scripts/qa/tools/security_scan.py / PASS
+- 2차 검증: python -m bandit -r ai/src data -f json / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: UNKNOWN
+- 함수: UNKNOWN
+- 줄 번호: UNKNOWN
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 시크릿, 예외 삼킴, 위험한 실행 패턴
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/security_scan.py ; python -m bandit -r ai/src data -f json
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] findings=0 || B[PASS] bandit 해당 규칙 없음
+## QA-20261103-021147-653 TC-SEC-001
+
+- 실행 시각: 2026-11-03T02:11:47+09:00
+- 기능: secrets
+- 영역: 03_security_quality
+- 테스트 종류: security
+- 1차 검증: python scripts/qa/tools/security_scan.py / PASS
+- 2차 검증: python -m bandit -r ai/src data -f json / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: UNKNOWN
+- 함수: UNKNOWN
+- 줄 번호: UNKNOWN
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 시크릿, 예외 삼킴, 위험한 실행 패턴
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/security_scan.py ; python -m bandit -r ai/src data -f json
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] findings=0 || B[PASS] bandit 해당 규칙 없음
+## QA-20261103-021222-293 TC-SEC-001
+
+- 실행 시각: 2026-11-03T02:12:22+09:00
+- 기능: secrets
+- 영역: 03_security_quality
+- 테스트 종류: security
+- 1차 검증: python scripts/qa/tools/security_scan.py / PASS
+- 2차 검증: python -m bandit -r ai/src data -f json / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: UNKNOWN
+- 함수: UNKNOWN
+- 줄 번호: UNKNOWN
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 시크릿, 예외 삼킴, 위험한 실행 패턴
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/security_scan.py ; python -m bandit -r ai/src data -f json
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] findings=0 || B[PASS] bandit 해당 규칙 없음
+## QA-20261103-021407-252 TC-SEC-001
+
+- 실행 시각: 2026-11-03T02:14:07+09:00
+- 기능: secrets
+- 영역: 03_security_quality
+- 테스트 종류: security
+- 1차 검증: python scripts/qa/tools/security_scan.py / PASS
+- 2차 검증: python -m bandit -r ai/src data -f json / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: UNKNOWN
+- 함수: UNKNOWN
+- 줄 번호: UNKNOWN
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 시크릿, 예외 삼킴, 위험한 실행 패턴
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/security_scan.py ; python -m bandit -r ai/src data -f json
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: A[PASS] findings=0 || B[PASS] bandit 해당 규칙 없음
+## QA-20261103-021426-955 TC-SEC-001
+
+- 실행 시각: 2026-11-03T02:14:26+09:00
+- 기능: secrets
+- 영역: 03_security_quality
+- 테스트 종류: security
+- 1차 검증: python scripts/qa/tools/security_scan.py / PASS
+- 2차 검증: python -m bandit -r ai/src data -f json / PASS
+- 최종 상태: PASS
+- Git Commit: f7421b7ba3a4617a5b22ffbfc12a6970e28d5d2c+dirty
+- 파일: UNKNOWN
+- 함수: UNKNOWN
+- 줄 번호: UNKNOWN
+- ISSUE_ID: -
+- RISK_ID: -
+- 목적: 시크릿, 예외 삼킴, 위험한 실행 패턴
+- 입력값: -
+- 기대 결과: 두 도구 모두 PASS
+- 실제 결과: PASS
+- 오류: -
+- 재현: python scripts/qa/tools/security_scan.py ; python -m bandit -r ai/src data -f json
+- 원인: -
+- 수정 위치: -
+- 재검증: 두 도구 일치
+- 근거: regression-rerun. A[PASS] findings=0 || B[PASS] bandit 해당 규칙 없음

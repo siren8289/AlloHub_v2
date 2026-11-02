@@ -77,3 +77,32 @@ jobs:
       - run: docker compose -f compose.yaml config --quiet
         env:
           DB_PASSWORD: ci-check
+
+  qa:
+    name: QA cross-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Install QA, data, and AI dependencies
+        run: |
+          python -m pip install -r qa/requirements.txt -r data/requirements.txt -r ai/requirements-dev.txt
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - name: Cross-check and record
+        run: python3 scripts/qa/run_qa.py --ci --with-regression
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qa-reports
+          path: |
+            scripts/qa/latest.json
+            qa/master_test_sheet.xlsx
+            qa/input/testcases.tsv
+            qa/results

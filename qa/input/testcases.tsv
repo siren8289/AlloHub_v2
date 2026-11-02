@@ -1,0 +1,25 @@
+TC_ID	area	feature	test_type	purpose_ko	tool_a	tool_b	optional
+TC-UNIT-001	01_unit_integration	risk_grade	unit	기본 위험 건수면 danger	pytest	independent_unit.py	no
+TC-UNIT-002	01_unit_integration	risk_grade	unit	깨끗한 점수면 stable	pytest	independent_unit.py	no
+TC-UNIT-003	01_unit_integration	risk_grade	unit	임계값에서 warning	pytest	independent_unit.py	no
+TC-UNIT-004	01_unit_integration	risk_grade	unit	감액만 있어도 warning	pytest	independent_unit.py	no
+TC-UNIT-005	01_unit_integration	company_name_normalize	unit	회사 표기 정규화	pytest	independent_unit.py	no
+TC-UNIT-006	01_unit_integration	company_search	unit	삼성전자 검색	pytest	independent_unit.py	no
+TC-UNIT-007	01_unit_integration	company_search	unit	없는 회사 404	pytest	independent_unit.py	no
+TC-UNIT-008	01_unit_integration	company_search	unit	빈 이름 422	pytest	independent_unit.py	no
+TC-UNIT-009	01_unit_integration	number_convert	unit	숫자 변환	pytest	independent_unit.py	no
+TC-UNIT-010	01_unit_integration	disclosure_count	unit	빈 법인번호 제외	pytest	independent_unit.py	no
+TC-UNIT-011	01_unit_integration	fetch_row_normalize	unit	수집 행 정리	pytest	independent_unit.py	no
+TC-UNIT-012	01_unit_integration	company_table_join	unit	회사표 결합	pytest	independent_unit.py	no
+TC-UNIT-QA-001	01_unit_integration	qa_history	unit	QA 기록 append 보존	pytest	independent_unit.py	no
+TC-UNIT-J-001	01_unit_integration	allocation_calc	unit	나머지 투자자 배분	gradle_junit	AllocationCrossCheck	no
+TC-UNIT-J-002	01_unit_integration	allocation_calc	unit	균등 배분	gradle_junit	AllocationCrossCheck	no
+TC-UNIT-AI-SUITE	01_unit_integration	ai_full_suite	unit	AI 전체 스위트	pytest_ai	import_torch	yes
+TC-API-001	02_web_api	company_screen_api	api	빈 회사명 VALIDATION_ERROR	gradle_junit	bootRun_http	no
+TC-API-002	02_web_api	allocation_api	api	비율 합 미달 BAD_REQUEST	gradle_junit	bootRun_http	no
+TC-API-003	02_web_api	health_check	api	헬스체크 ok	gradle_junit	bootRun_http	no
+TC-SEC-001	03_security_quality	secrets	security	비밀값 탐지	security_scan.py	bandit	no
+TC-SEC-002	03_security_quality	swallowed_exception	security	예외 삼킴 탐지	security_scan.py	bandit	no
+TC-SEC-003	03_security_quality	code_execution	security	위험 코드 실행 탐지	security_scan.py	bandit	no
+TC-INFRA-001	04_infra_deploy	docker_deploy	infra	compose 유효성	docker_compose_config	compose_cross_check.py	no
+TC-INFRA-002	04_infra_deploy	github_actions_ci	infra	CI qa 잡 확인	ci_workflow_check_a	ci_workflow_check_b	no
